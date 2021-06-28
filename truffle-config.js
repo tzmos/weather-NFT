@@ -1,11 +1,7 @@
 const HDWalletProvider = require('@truffle/hdwallet-provider')
 require('dotenv').config()
 
-// const mnemonic = process.env.MNEMONIC
 const private_key = process.env.PRIVATE_KEY
-const rinkeby_url = process.env.RINKEBY_RPC_URL
-const kovan_url = process.env.KOVAN_RPC_URL
-
 const matic_url = process.env.MATIC_RPC_URL
 
 
