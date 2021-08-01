@@ -28,12 +28,12 @@ yarn global add truffle
 2. Setup repo
 
 ```bash
-git clone https://github.com/PatrickAlphaC/weather-nft
+git clone https://github.com/kwsantiago/weather-nft
 cd weather-nft 
 yarn
+truffle migrate --network  mumbai
 ```
 
-sdfasdfasf
 3. Deploy
 
 ```
@@ -45,8 +45,8 @@ truffle migrate --network XXXX
 
 ```
 yarn add truffle-plugin-verify
-truffle run verify WeatherNFT --network rinkeby --license MIT
-truffle run verify WeatherFeed --network rinkeby --license MIT
+truffle run verify WeatherNFT --network mumbai --license MIT
+truffle run verify WeatherFeed --network mumbai --license MIT
 ```
 
 ## password_cl_ea
