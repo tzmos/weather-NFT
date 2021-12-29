@@ -17,7 +17,7 @@ yarn global add truffle
 2. Setup (从github克隆源码到自己的开发环境)
 
 ```bash
-git clone https://github.com/tzmos/NFTS.git
+git clone https://github.com/tzmos/weather-NFT.git
 cd weather-nft 
 yarn
 truffle migrate --network  rinkeby
