@@ -1,14 +1,14 @@
 const HDWalletProvider = require('@truffle/hdwallet-provider')
 require('dotenv').config()
 
-const private_key = process.env.PRIVATE_KEY
-const matic_url = process.env.MATIC_RPC_URL
+const mnemonic = process.env.MNEMONIC
+const rinkeby_url = process.env.RINKEBY_RPC_URL
 
 
 module.exports = {
   networks: {
     binance_testnet: {
-      provider: () => new HDWalletProvider(private_key, 'https://data-seed-prebsc-1-s1.binance.org:8545'),
+      provider: () => new HDWalletProvider(mnemonic, 'https://data-seed-prebsc-1-s1.binance.org:8545'),
       network_id: 97,
       confirmations: 10,
       timeoutBlocks: 200,
@@ -16,28 +16,29 @@ module.exports = {
     },
     kovan: {
       provider: () => {
-        return new HDWalletProvider(private_key, kovan_url)
+        return new HDWalletProvider(mnemonic, kovan_url)
       },
       network_id: '42',
       skipDryRun: true
     },
     rinkeby: {
       provider: () => {
-        return new HDWalletProvider(private_key, rinkeby_url)
+        return new HDWalletProvider(mnemonic, rinkeby_url)
       },
+      networkCheckTimeout: 10000,
       network_id: '4',
       skipDryRun: true
     },
     matic: {
       provider: () => {
-        return new HDWalletProvider(private_key, matic_url)
+        return new HDWalletProvider(mnemonic, matic_url)
       },
       network_id: '137',
       skipDryRun: true
     },
     mumbai: {
       provider: () => {
-        return new HDWalletProvider(private_key, 'https://matic-mumbai.chainstacklabs.com')
+        return new HDWalletProvider(mnemonic, 'https://matic-mumbai.chainstacklabs.com')
       },
       network_id: '80001',
       skipDryRun: true

@@ -1,20 +1,6 @@
 // const MyContract = artifacts.require('MyContract')
 const LinkTokenInterface = artifacts.require('LinkTokenInterface')
 
-// const linkIpfsImageURIs = {
-//     "rain": "",
-//     "sun": "",
-//     "snow": "",
-//     "cloud": ""
-// }
-
-// const linkIpfsTokenURI = {
-//     "rain": "",
-//     "sun": "",
-//     "snow": "",
-//     "cloud": ""
-// }
-
 const payment = process.env.TRUFFLE_CL_BOX_PAYMENT || '1000000000000000000'
 
 const fundContract = async (contractAddress, linkTokenAddress) => {

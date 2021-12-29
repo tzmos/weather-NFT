@@ -10,7 +10,7 @@ import "./interfaces/IWeatherFeed.sol";
 import "@chainlink/contracts/src/v0.6/ChainlinkClient.sol";
 import "@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol";
 
-contract Consensus2021ChainlinkWeatherNFT is ERC721, Ownable, ChainlinkClient {
+contract TmosNFT is ERC721, Ownable, ChainlinkClient {
     using Strings for string;
     bool public overRide;
     string public overRideWeather;
@@ -29,7 +29,7 @@ contract Consensus2021ChainlinkWeatherNFT is ERC721, Ownable, ChainlinkClient {
     event attemptedPassword(bytes32 requestId);
 
     constructor(address _link, address _weatherFeed, address _oracle, bytes32 _jobId, uint256 _fee) public
-        ERC721("Consensus2021ChainlinkWeatherNFT", "wNFT")
+        ERC721("TMOS", "TMOS")
     {   
         if (_link == address(0)) {
             setPublicChainlinkToken();
@@ -37,13 +37,13 @@ contract Consensus2021ChainlinkWeatherNFT is ERC721, Ownable, ChainlinkClient {
             setChainlinkToken(_link);
         }
         weatherFeedAddress = _weatherFeed;
-        weatherToWeatherURI["Thunderstorm"] = "https://ipfs.io/ipfs/QmP3TpPig2St3nTwvi9TFAGdv6YTew5k4pmC1yFtaLwFFo";
-        weatherToWeatherURI["Drizzle"] = "https://ipfs.io/ipfs/QmP3TpPig2St3nTwvi9TFAGdv6YTew5k4pmC1yFtaLwFFo";
-        weatherToWeatherURI["Rain"] = "https://ipfs.io/ipfs/QmP3TpPig2St3nTwvi9TFAGdv6YTew5k4pmC1yFtaLwFFo";
-        weatherToWeatherURI["Snow"] = "https://ipfs.io/ipfs/QmaeYdJ8EydzUGdGQGkPNkSBEQUmwRmAv2QWq1VTfsfrdk";
-        weatherToWeatherURI["Atmosphere"] = "https://ipfs.io/ipfs/QmbNEeSa8pZrepYhGnnhSCmABZXymvc7YR5JKFT7TuYuYY";
-        weatherToWeatherURI["Clear"] = "https://ipfs.io/ipfs/QmcKEV1xJQ3ZCyPsDPJHsuEZnF95hNZf8S3rBEvzCKwjof";
-        weatherToWeatherURI["Clouds"] = "https://ipfs.io/ipfs/QmbNEeSa8pZrepYhGnnhSCmABZXymvc7YR5JKFT7TuYuYY";
+        weatherToWeatherURI["Thunderstorm"] = "https://ipfs.io/ipfs/QmNbe87Hi6TB5N8RKHzD6uFbixcaQFh2FSKNWM1bEbmFHo";
+        weatherToWeatherURI["Drizzle"] = "https://ipfs.io/ipfs/QmNbe87Hi6TB5N8RKHzD6uFbixcaQFh2FSKNWM1bEbmFHo";
+        weatherToWeatherURI["Rain"] = "https://ipfs.io/ipfs/QmNbe87Hi6TB5N8RKHzD6uFbixcaQFh2FSKNWM1bEbmFHo";
+        weatherToWeatherURI["Snow"] = "https://ipfs.io/ipfs/QmVjf1NkWW7UhyWTQ73vf2UArbvyo8tXiWBgWxUW9egdeS";
+        weatherToWeatherURI["Atmosphere"] = "https://ipfs.io/ipfs/QmapYrbQwGujixfWiq2wo4U1jnZtK6pxNjUbEdVipPkHKU";
+        weatherToWeatherURI["Clear"] = "https://ipfs.io/ipfs/QmaZUTvgQbjvzRzpn6CMyW15nykAWFbBvrRDfqbzTnYiRA";
+        weatherToWeatherURI["Clouds"] = "https://ipfs.io/ipfs/QmapYrbQwGujixfWiq2wo4U1jnZtK6pxNjUbEdVipPkHKU";
         overRide = true;
         overRideTokenIdToWeatherURI[0] = weatherToWeatherURI["Rain"];
         overRideTokenIdToWeatherURI[1] = weatherToWeatherURI["Clear"];
@@ -74,7 +74,7 @@ contract Consensus2021ChainlinkWeatherNFT is ERC721, Ownable, ChainlinkClient {
     }
 
     function tokenURI(uint256 tokenId) public view override (ERC721) returns (string memory) {
-        require(_exists(tokenId), "ERC721Metadata: URI query for nonexistent token");
+        require(_exists(tokenId), "URI query for nonexistent token");
         if(overRide == true){
             return overRideTokenIdToWeatherURI[tokenId % 4];
         }

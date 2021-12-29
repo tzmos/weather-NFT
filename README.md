@@ -1,56 +1,38 @@
-# Weather-NFTs
-
-<br/>
-<p align="center">
-<a href="https://chain.link" target="_blank">
-<img src="https://raw.githubusercontent.com/PatrickAlphaC/weather-nft/main/weather-ipfs/img/cloud-chainlink.gif" width="175" alt="Chainlink Cloud">
-<img src="https://raw.githubusercontent.com/PatrickAlphaC/weather-nft/main/weather-ipfs/img/rain-chainlink.gif" width="175" alt="Chainlink Rain">
-<img src="https://raw.githubusercontent.com/PatrickAlphaC/weather-nft/main/weather-ipfs/img/sun-chainlink.gif" width="175" alt="Chainlink Sun">
-<img src="https://raw.githubusercontent.com/PatrickAlphaC/weather-nft/main/weather-ipfs/img/snow-chainlink.gif" width="175" alt="Chainlink Snow">
-</a>
-</p>
-<br/>
+# Tmos-Weather-NFTs
 
 [Weather Condition Codes](https://openweathermap.org/weather-conditions)
 
-## Requirements
+## 操作步骤
 
-- NPM
+- NPM INSTALL OR YARN INSTALL
 
 ## Installation
 
-1. Install truffle
+1. Install truffle(搭建开发环境truffle)
 
 ```bash
 yarn global add truffle
 ```
 
-2. Setup repo
+2. Setup (从github克隆源码到自己的开发环境)
 
 ```bash
-git clone https://github.com/kwsantiago/weather-nft
+git clone https://github.com/tzmos/NFTS.git
 cd weather-nft 
 yarn
-truffle migrate --network  mumbai
+truffle migrate --network  rinkeby
 ```
 
-3. Deploy
+3. Deploy(部署到rinkeby测试网中)
 
 ```
-truffle migrate --network XXXX
+truffle migrate --network rinkeby
 ```
 
-### Verify
-
+4. Verify(发布到etherscan.io网站进行合约验证)
 
 ```
 yarn add truffle-plugin-verify
-truffle run verify WeatherNFT --network mumbai --license MIT
-truffle run verify WeatherFeed --network mumbai --license MIT
+truffle run verify TmosNFT --network rinkeby --license MIT
+truffle run verify WeatherFeed --network rinkeby --license MIT
 ```
-
-## password_cl_ea
-
-https://github.com/PatrickAlphaC/password_cl_ea
-
-

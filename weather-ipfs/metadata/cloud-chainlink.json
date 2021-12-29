@@ -1,5 +1,36 @@
 {
-    "name": "Cloud Chainlink",
-    "description": "Tut tut, it looks like Rain!",
-    "image": "https://ipfs.io/ipfs/QmUXxMue7AazMGjLKjU7SrYRU7c9va3dRq19ui39KnvwpL?filename=cloud-chainlink.gif"
+    
+    "name": "多云天气",
+    "description": "今天看起来快要下雨啦!",
+    "image": "https://ipfs.io/ipfs/QmUXxMue7AazMGjLKjU7SrYRU7c9va3dRq19ui39KnvwpL?filename=cloud-chainlink.gif",
+    "attributes": [
+        {
+            "trait_type": "溫度",
+            "value": 20
+        },
+        {
+            "trait_type": "濕度",
+            "value": 50
+        },
+        {
+            "trait_type": "風級",
+            "value": 3
+        },
+        {
+            "trait_type": "水量",
+            "value": 5
+        },
+        {
+            "trait_type": "經度",
+            "value": 20
+        },
+        {
+            "trait_type": "維度",
+            "value": 130
+        },
+        {
+            "trait_type": "可見度",
+            "value": 100
+        }
+    ]
 }

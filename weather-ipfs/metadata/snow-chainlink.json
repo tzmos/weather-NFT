@@ -1,5 +1,35 @@
 {
-    "name": "Snow Chainlink",
-    "description": "It's the most wonderful time of the year. ",
-    "image": "https://ipfs.io/ipfs/QmRsy9F5FLdAGtHo1JzfXGfSqkzT5Sh2DTY5BENYgseVZP?filename=snow-chainlink.gif"
+    "name": "雪天",
+    "description": "好美的白雪世界. ",
+    "image": "https://ipfs.io/ipfs/QmRsy9F5FLdAGtHo1JzfXGfSqkzT5Sh2DTY5BENYgseVZP?filename=snow-chainlink.gif",
+    "attributes": [
+        {
+            "trait_type": "溫度",
+            "value": -1
+        },
+        {
+            "trait_type": "濕度",
+            "value": 70
+        },
+        {
+            "trait_type": "風級",
+            "value": 3
+        },
+        {
+            "trait_type": "水量",
+            "value": 6
+        },
+        {
+            "trait_type": "經度",
+            "value": 60
+        },
+        {
+            "trait_type": "維度",
+            "value": 150
+        },
+        {
+            "trait_type": "可見度",
+            "value": 80
+        }
+    ]
 }

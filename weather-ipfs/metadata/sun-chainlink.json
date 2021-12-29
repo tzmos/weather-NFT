@@ -1,5 +1,35 @@
 {
-    "name": "Sun Chainlink",
-    "description": "I'm walking on Sunshine. ",
-    "image": "https://ipfs.io/ipfs/QmSXAbW5kqn2Ywt5DL3hW5MsjeKJH9rLeLkQs3bRuyTxq1?filename=sun-chainlink.gif"
+    "name": "晴天",
+    "description": "晴空萬里，擁抱陽光 ",
+    "image": "https://ipfs.io/ipfs/QmSXAbW5kqn2Ywt5DL3hW5MsjeKJH9rLeLkQs3bRuyTxq1?filename=sun-chainlink.gif",
+    "attributes": [
+        {
+            "trait_type": "溫度",
+            "value": 26
+        },
+        {
+            "trait_type": "濕度",
+            "value": 30
+        },
+        {
+            "trait_type": "風級",
+            "value": 2
+        },
+        {
+            "trait_type": "水量",
+            "value": 0
+        },
+        {
+            "trait_type": "經度",
+            "value": 60
+        },
+        {
+            "trait_type": "維度",
+            "value": 180
+        },
+        {
+            "trait_type": "可見度",
+            "value": 1000
+        }
+    ]
 }

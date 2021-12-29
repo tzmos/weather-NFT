@@ -1,5 +1,35 @@
 {
-    "name": "Rain Chainlink",
-    "description": "April showers bring May flowers. ",
-    "image": "https://ipfs.io/ipfs/QmY1J24amQ55PfVtRQZuwUCaGbWogFrPsUSteX4SLyb9LE?filename=rain-chainlink.gif"
+    "name": "下雨天",
+    "description": "春雨为万物滋养！ ",
+    "image": "https://ipfs.io/ipfs/QmY1J24amQ55PfVtRQZuwUCaGbWogFrPsUSteX4SLyb9LE?filename=rain-chainlink.gif",
+    "attributes": [
+        {
+            "trait_type": "溫度",
+            "value": 18
+        },
+        {
+            "trait_type": "濕度",
+            "value": 90
+        },
+        {
+            "trait_type": "風級",
+            "value": 4
+        },
+        {
+            "trait_type": "水量",
+            "value": 15
+        },
+        {
+            "trait_type": "經度",
+            "value": 22
+        },
+        {
+            "trait_type": "維度",
+            "value": 120
+        },
+        {
+            "trait_type": "可見度",
+            "value": 60
+        }
+    ]
 }
