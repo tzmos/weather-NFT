@@ -74,14 +74,16 @@ contract WeatherFeed is ChainlinkClient, Ownable {
   }
 
   /**
-   * @notice Allows the owner to withdraw any LINK balance on the contract
+   * @notice 允許鑄造者從合約中隨意取出LINK余額。
    */
   function withdrawLink() public onlyOwner {
     LinkTokenInterface link = LinkTokenInterface(chainlinkTokenAddress());
     require(link.transfer(msg.sender, link.balanceOf(address(this))), "Unable to transfer");
   }
 
-
+  /**
+    把32字節格式轉換成字符串格式工具函數。
+   */
   function bytes32ToString(bytes32 _bytes32) public pure returns (string memory) {
         uint8 i = 0;
         while(i < 32 && _bytes32[i] != 0) {

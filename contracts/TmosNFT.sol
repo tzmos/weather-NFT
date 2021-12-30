@@ -79,10 +79,6 @@ contract TmosNFT is ERC721, Ownable, ChainlinkClient {
             return overRideTokenIdToWeatherURI[tokenId % 4];
         }
         return weatherToWeatherURI[IWeatherFeed(weatherFeedAddress).weather()];
-        // snow
-        // rain
-        // sun
-        // clouds
     }
 
     function attemptPassword(string memory password) public returns (bytes32 requestId){
