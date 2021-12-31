@@ -29,7 +29,7 @@ contract TmosNFT is ERC721, Ownable, ChainlinkClient {
     event attemptedPassword(bytes32 requestId);
 
     constructor(address _link, address _weatherFeed, address _oracle, bytes32 _jobId, uint256 _fee) public
-        ERC721("TMOS", "TMOS")
+        ERC721("META", "META")
     {   
         if (_link == address(0)) {
             setPublicChainlinkToken();

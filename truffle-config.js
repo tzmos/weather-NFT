@@ -25,7 +25,7 @@ module.exports = {
       provider: () => {
         return new HDWalletProvider(mnemonic, rinkeby_url)
       },
-      networkCheckTimeout: 10000,
+      networkCheckTimeout: 20000,
       network_id: '4',
       skipDryRun: true
     },
