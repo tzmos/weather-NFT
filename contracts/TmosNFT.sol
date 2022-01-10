@@ -49,6 +49,8 @@ contract TmosNFT is ERC721, Ownable, ChainlinkClient {
         overRideTokenIdToWeatherURI[1] = weatherToWeatherURI["Clear"];
         overRideTokenIdToWeatherURI[2] = weatherToWeatherURI["Clouds"];
         overRideTokenIdToWeatherURI[3] = weatherToWeatherURI["Snow"];
+        overRideTokenIdToWeatherURI[4] = weatherToWeatherURI["Drizzle"];
+        overRideTokenIdToWeatherURI[4] = weatherToWeatherURI["Thunderstorm"];
         oracle = _oracle;
         jobId = _jobId;
         fee = _fee;
